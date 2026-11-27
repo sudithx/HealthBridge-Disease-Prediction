@@ -1,3 +1,4 @@
+
 import streamlit as st
 import requests
 
@@ -53,6 +54,11 @@ if st.button("Predict Disease"):
 
         st.success(f"Predicted disease: {result['predicted_disease']}")
         st.write(f"Model confidence: {result['confidence']}%")
+
+        if "shap_explanation" in result:
+            st.subheader("Why this prediction?")
+            for item in result["shap_explanation"]:
+                st.write(f"{item['feature']}: {item['impact']}")
 
     except requests.exceptions.RequestException:
         st.error("Could not connect to the prediction API. Start the FastAPI server first.")
