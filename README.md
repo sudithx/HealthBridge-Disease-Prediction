@@ -48,3 +48,17 @@ The proposed system follows these stages:
 ## 6. Dataset Information
 
 The project uses the healthcare symptom-disease dataset provided
+## Checkpoint 4 – Integration and Testing
+
+- Integrated the trained Random Forest model with FastAPI.
+- Created `/health` and `/predict` API endpoints.
+- Tested API responses successfully using FastAPI TestClient.
+- Built a Streamlit interface for patient inputs.
+- Added SHAP explainability to identify important prediction features.
+- Saved backend and frontend code in the repository.
+
+### Technology Stack
+Python, FastAPI, Streamlit, Scikit-learn, SHAP, Pandas.
+
+### Disclaimer
+This is an educational project and is not intended for clinical diagnosis.
