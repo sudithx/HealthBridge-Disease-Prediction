@@ -54,6 +54,10 @@ if st.button("Predict Disease"):
 
         st.success(f"Predicted disease: {result['predicted_disease']}")
         st.write(f"Model confidence: {result['confidence']}%")
+        st.subheader("Why this prediction?")
+
+        for item in result.get("shap_explanation", []):
+        st.write(f"{item['feature']}: {item['impact']}")
 
         if "shap_explanation" in result:
             st.subheader("Why this prediction?")
