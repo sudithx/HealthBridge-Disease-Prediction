@@ -1,0 +1,26 @@
+{
+    "predicted_disease": "Anaemia",
+    "confidence": 50.5,
+    "shap_explanation": [
+        {
+            "feature": "Gender_M",
+            "impact": 0.1763
+        },
+        {
+            "feature": "Headache",
+            "impact": 0.1411
+        },
+        {
+            "feature": "Fever",
+            "impact": -0.0565
+        },
+        {
+            "feature": "Cough",
+            "impact": -0.0555
+        },
+        {
+            "feature": "SpO2",
+            "impact": 0.0526
+        }
+    ]
+}
