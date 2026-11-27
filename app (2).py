@@ -3,7 +3,7 @@ from pydantic import BaseModel
 import pandas as pd
 import joblib
 
-model = joblib.load("healthbridge_best_model.pkl")
+model = joblib.load("models/healthbridge_best_model.pkl")
 
 app = FastAPI(title="HealthBridge Disease Prediction API")
 
