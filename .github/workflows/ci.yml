@@ -27,4 +27,4 @@ jobs:
           pip install pytest httpx
 
       - name: Run integration tests
-        run: pytest -v test_app.py
+        run: python -m pytest -v
