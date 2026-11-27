@@ -1,3 +1,4 @@
+
 import streamlit as st
 import requests
 
@@ -51,12 +52,16 @@ if st.button("Predict Disease"):
         response.raise_for_status()
         result = response.json()
 
-        st.success(f"Predicted disease: {result['predicted_disease']}")
+        st.success(
+            f"Predicted disease: {result['predicted_disease']}"
+        )
         st.write(f"Model confidence: {result['confidence']}%")
 
         st.subheader("Why this prediction?")
         for item in result.get("shap_explanation", []):
-            st.write(f"{item['feature']}: {item['impact']}")
+            st.write(
+                f"{item['feature']}: {item['impact']}"
+            )
 
     except requests.exceptions.RequestException as error:
         st.error(f"API connection failed: {error}")
